@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "quantem-checker"
+version = "0.1.0"
+description = "A model-agnostic forensic harness for detecting lookahead/leakage in financial-ML backtests."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Jonathan Scarpelli" }]
+keywords = ["backtesting", "quant", "finance", "machine-learning", "lookahead", "leakage", "evaluation"]
+dependencies = [
+    "numpy>=1.21",
+    "pandas>=1.3",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+parquet = ["pyarrow>=10"]
+
+[project.scripts]
+quantem-checker = "quantem_checker.__main__:main"
+
+[project.urls]
+Homepage = "https://quantem.finance"
+
+[tool.setuptools.packages.find]
+include = ["quantem_checker*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
