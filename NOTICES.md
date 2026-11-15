@@ -24,4 +24,4 @@ https://www.freqtrade.io/en/stable/lookahead-analysis/
 The implementation here is first-party code, not a bundled Freqtrade dependency
 or implementation. No affiliation or endorsement is implied.
 
-The candidate is private and not yet cleared for external distribution.
+Licensing does not grant access to private research datasets or evidence.

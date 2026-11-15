@@ -24,6 +24,7 @@ quantem-checker = "quantem_checker.__main__:main"
 
 [project.urls]
 Homepage = "https://quantem.finance"
+Repository = "https://github.com/Scarcrux/quantem-checker"
 
 [tool.setuptools.packages.find]
 include = ["quantem_checker*"]

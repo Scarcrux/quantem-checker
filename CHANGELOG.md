@@ -1,6 +1,6 @@
 # Changes
 
-## 0.2.0a1 — private integration, not a public release
+## 0.2.0a1 — prerelease candidate
 
 - Retain `quantem_checker` library imports, helper exports and existing CLI flags.
 - Add `audit_prefix_consistency`, `audit_event_clock`, `audit_ledger` and
@@ -22,8 +22,10 @@
   the optional `.[parquet]` group (pandas/PyArrow); existing installations with
   those dependencies retain them. Local demo/help/core audits do not need pandas.
 - Keep the existing LICENSE unchanged and use organization maintenance metadata.
-  Public privacy/notice review remains a separate gate. No dataset, empirical
-  evidence, paper verifier, history rewrite or repository visibility change.
+  Retain the imported source's separate MIT notice in built distributions.
+  No dataset, empirical evidence or paper verifier is included. Repository
+  visibility and package distribution are recorded separately from software
+  versioning; this changelog does not assert a publication date.
 
 Existing numerical outputs are not promised identical: corrected ranking,
 selection, initial-cost treatment and adequacy rules change relevant results.

@@ -1,16 +1,32 @@
 # Quantem Checker
 
-Local tools for checking temporal pipeline behavior, supplied availability clocks and portfolio accounting. All examples
-generate their own data. No research datasets, accounts, GPU, private evidence
-or paper-specific verifier are included. This repository remains private. Version 0.2.0a1 is an integrated prerelease;
-no public repository visibility change or package publication is implied.
+Local tools for checking temporal pipeline behavior, supplied availability
+clocks and portfolio accounting. Version **0.2.0a1** is a prerelease. All examples
+generate their own data; no research datasets, accounts or GPU are required.
+
+- Probe a pipeline for dependence on future input values or missingness.
+- Check supplied receipt timestamps against decision and execution clocks.
+- Reconcile long-only portfolio units, cash, marks and declared fees.
+
+Run the tools inside your own environment with data you are authorized to use.
+No research datasets, private paper evidence or paper-specific verifier are
+included. Passing a check is evidence about the supplied case, not certification
+that a strategy is causal, profitable or ready to trade.
 
 ## Run a meaningful demonstration
 
 ```sh
+git clone https://github.com/Scarcrux/quantem-checker.git
+cd quantem-checker
 python -m venv .venv
-.venv/bin/python -m pip install '.[dev]'
+.venv/bin/python -m pip install .
 .venv/bin/quantem-checker demo
+```
+
+For development checks:
+
+```sh
+.venv/bin/python -m pip install '.[dev,parquet]'
 .venv/bin/python -m pytest -q tests
 ```
 
@@ -66,8 +82,8 @@ execution model, liquidity/borrow model or source-of-price certification.
 ## Optional statistical screens
 
 ```sh
-python -m pip install '.[parquet]'
-quantem-checker --predictions predictions.parquet --returns returns.parquet
+.venv/bin/python -m pip install '.[parquet]'
+.venv/bin/quantem-checker --predictions predictions.parquet --returns returns.parquet
 ```
 
 Panels require identical unique ordered time/asset axes. Predictions on row t
@@ -89,8 +105,9 @@ requested screens were not flagged, 1 means flagged, 2 means invalid/insufficien
 ## Scope, attribution and reproducibility
 
 The existing first-party MIT license and required notice are retained. Package
-maintenance metadata uses organization attribution. Dependencies are installed separately and retain their notices;
-see `NOTICES.md`. No vendor records, PDFs, private execution history, production
+maintenance metadata uses organization attribution. Dependencies are installed
+separately and retain their notices; see [NOTICES.md](NOTICES.md). No vendor
+records, PDFs, private execution history, production
 dashboard or historical numerical claims are bundled. A user with authorized
 data access can run the tools inside their environment without sharing data.
 
@@ -98,10 +115,11 @@ The original checker source remains in Git at `bc4751c`. Screening-v3 output mus
 not replace historical results without an explicitly versioned reanalysis.
 [CHANGELOG.md](CHANGELOG.md) records compatibility changes;
 [docs/INTEGRATION-SOURCES.json](docs/INTEGRATION-SOURCES.json) binds imported source
-and namespace transformations. [docs/PRIVATE-INTEGRATION-REVIEW.md](docs/PRIVATE-INTEGRATION-REVIEW.md) records local QA and remaining public-release gates.
-No DOI, public repository URL, journal acceptance or independent external review
-is claimed. Public release requires owner approval for the exact contents and
-destination. Do not describe synthetic controls as validation of market results.
+and namespace transformations. The referenced research revision is a provenance
+identifier, not a promise of access to private research code or evidence.
+The retained review records describe the integration and preparation process.
+No DOI, journal acceptance or independent external review is claimed.
+Do not describe synthetic controls as validation of market results.
 
 ## Compatibility and examples
 
@@ -122,9 +140,6 @@ labelling its forward-generated oracle honestly. The former
 it runs the bounded direct good/bad controls. Its historical implementation
 remains in Git. No new grid/threshold benchmark was executed for this integration.
 
-Do not publish this repository or its history without explicit approval. The
-owner approved retaining the existing copyright and historical package-author
-attribution on 2026-11-15; see [the narrow exception](docs/ATTRIBUTION-EXCEPTION.md).
-That resolves the attribution/privacy gate, while exact public-release approval
-remains required. No datasets or private
-paper evidence are included in this repository update.
+A full minimum-version/platform matrix remains unverified. No external adoption or calibrated
+detection error rates are claimed. Caller-supplied stage/event identifiers may
+appear in local reports; those reports are not automatically anonymized.

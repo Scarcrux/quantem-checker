@@ -82,8 +82,19 @@ name = "quantem-checker"
 
 [[mission]]
   id = "m-b5f8806a"
-  title = "Prepare exact release wording and obtain publication approval"
+  title = "Prepare exact source release wording and verification"
+  status = "done"
+  note = "Owner requested preparation of the exact release. Prepare source-first publication of the existing repository/history at version0.2.0a1, retaining notices and approved attribution. Final README/description/source links, test/build/demo checks, exact file/artifact manifest and approval proposal required. Keep repository PRIVATE; no release/tag/package upload, visibility change, deployment or empirical study. Review documents and historical claims would be visible if this exact history is approved."
+  issue = 0
+
+  [[mission.comment]]
+    text = "Prepared source-first existing-repository release0.2.0a1: final README/changelog/notices/repository metadata, accurate proposed description and full-history exposure proposal.53 tests pass; build/Twine, fresh NumPy-only installed wheel with all8 controls, source/license byte matches, lint and history secret scan pass. Exact package hashes in RELEASE-PREPARATION.json; final commit/file approval manifest recorded locally after commit. No runtime changes, public release, visibility change or dataset transfer. Explicit approval tracked next."
+    at = "2026-11-15T17:06:43Z"
+
+[[mission]]
+  id = "m-99121a08"
+  title = "Obtain explicit approval for the prepared public repository scope"
   status = "next"
-  note = "Existing attribution exception is approved and recorded. Retain notices/history and keep data private. Before any public action, prepare final README/description/source links for selected repository or package route and present exact visible scope and destination for manual approval. Existing history includes older claims and operational reviews; no publication, visibility change, package upload or new identity exception is authorized."
+  note = "Prepared proposal docs/RELEASE-PROPOSAL.md and QA docs/RELEASE-PREPARATION.json. Proposed action: make existing Scarcrux/quantem-checker public at exact final approved commit/history and update description; no package upload, release/tag, website, datasets or private paper evidence. Existing attribution exception approved. Source/history, operational review documents and private research revision hashes would become visible. Keep PRIVATE until explicit manual approval; verify exact remote commit before action and anonymous access afterward."
   issue = 0
 # <<< commandem roadmap <<<
