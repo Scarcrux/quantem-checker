@@ -1,0 +1,250 @@
+{
+  "schema": 1,
+  "review_date": "2026-11-15",
+  "reviewed_git_commit": "473ad962db7a2aa81b203f251427c7c83f99a6e4",
+  "publication_approved": false,
+  "repository_private": true,
+  "history": [
+    {
+      "commit": "473ad962db7a2aa81b203f251427c7c83f99a6e4",
+      "file_count": 26,
+      "personal_attribution_content_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "commit": "f3af444c9d211789ca3b7912f7d3552879a6c4f6",
+      "file_count": 26,
+      "personal_attribution_content_paths": [
+        "LICENSE"
+      ]
+    },
+    {
+      "commit": "bc4751c68160e608b74e9eea869f0a5f94b0afd2",
+      "file_count": 10,
+      "personal_attribution_content_paths": [
+        "LICENSE",
+        "pyproject.toml"
+      ]
+    }
+  ],
+  "commit_identity_review": "All three commits use organization/handle names and GitHub noreply emails. No personal author name/address found; prior generic warning corrected.",
+  "tracked_files_at_base": [
+    {
+      "path": ".gitignore",
+      "sha256": "9be8d2e1dfcefa37cf3f55bb5b01d614896eca2d5f3baf8800b32b3e52eeda0f"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "ab8a3b32ec94ee3a47c1b43a9e82b54442be55766832aa5c0d51d74105146753"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "227cdef99c339e4f9df543963b6d45ebaaf166bb26c4315eaedb0002a15ff40a"
+    },
+    {
+      "path": "NOTICES.md",
+      "sha256": "63c9582858f7330158adf59d0ff2ccbd16621207a42d47ae9d0fedcda72bc64b"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ae888e9ff03b0239c2215c06c4ce7a3645dc41ec6fe4842f77f9473c83426a16"
+    },
+    {
+      "path": "commandem.toml",
+      "sha256": "f9b14ebb7def37239f05ae9f23247bb42fe238525bd5a9f16fe7602cef2bdfcb"
+    },
+    {
+      "path": "docs/INTEGRATION-CRITERIA.md",
+      "sha256": "1e18ef77452251d024601a96fdb9c5359334c98fdf532784b071fdf61ba9f9e0"
+    },
+    {
+      "path": "docs/INTEGRATION-SOURCES.json",
+      "sha256": "d4b73687740c915edb232a814b64193324e9b50bdce170ca5eb909609ecfec68"
+    },
+    {
+      "path": "docs/PRIVATE-INTEGRATION-REVIEW.json",
+      "sha256": "dfef3ad0519a902b90f683038b8ec54589387c9301805dcc2130950cfb50e7cd"
+    },
+    {
+      "path": "docs/PRIVATE-INTEGRATION-REVIEW.md",
+      "sha256": "3a628fc5f6311695825d118d125bf1f93859ae07c04cff4f85f6c32652dee798"
+    },
+    {
+      "path": "examples/specificity_grid.py",
+      "sha256": "2ce48c41f43831d8ebf22da258d89f9384f751a5533b412f165617bcbb0c6e8c"
+    },
+    {
+      "path": "examples/synthetic_demo.py",
+      "sha256": "c24a55631b59a5513855fe1c62d0bc40cd69bcfd97e3ce3b886da60f266c55ce"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "d246bd8cbf962acf9621da9fa9c95262602a76c361f23dc2114889d5cde4fcf1"
+    },
+    {
+      "path": "quantem_checker/__init__.py",
+      "sha256": "352924508b8799a9d3922a79eaf03a6819321e89f5268eddb0ef1f29e455954f"
+    },
+    {
+      "path": "quantem_checker/__main__.py",
+      "sha256": "d194e7015a9ee00dbd81f2e55441c0f690e766fda423c6ef20a04314872d775e"
+    },
+    {
+      "path": "quantem_checker/adequacy.py",
+      "sha256": "0c906e3b915028786e113d3005627ae63495acc9039bb6dc4aaff541d6500f1f"
+    },
+    {
+      "path": "quantem_checker/audit_demo.py",
+      "sha256": "a44fba31374b210ca1cb18c9e1fdd10a2d9c7a2fba91db3f0af760cb005a5518"
+    },
+    {
+      "path": "quantem_checker/availability.py",
+      "sha256": "a43ea9971f26a7948a7eb825984a6bd442a3c91480cf0766241373cf941bc6a8"
+    },
+    {
+      "path": "quantem_checker/core.py",
+      "sha256": "0e9bd2a2da83b2433989722186986c7305cb47daa0fbb46027510d65df81334b"
+    },
+    {
+      "path": "quantem_checker/ledger.py",
+      "sha256": "3279c4e2ab2f38ae882d3bf0cc2aa9a939100189e698a6fe4434844478cc8959"
+    },
+    {
+      "path": "quantem_checker/pipeline.py",
+      "sha256": "27ebbce383f119ffcead3c3f33ecf4e82fc406df34accf62d2b335afd1c1ecf3"
+    },
+    {
+      "path": "quantem_checker/screening.py",
+      "sha256": "71694b799a5602085b8eba12e10fc6f0afb748562b79a7badab8c68dba659243"
+    },
+    {
+      "path": "tests/test_audit_screening.py",
+      "sha256": "ce4bc22097b428b2981f90e498b7b0eeed033690861a5e1e816b26248f7263a4"
+    },
+    {
+      "path": "tests/test_audit_toolkit.py",
+      "sha256": "8d03c8f9b8b2325c4106d4dda35d4c068e3688d5f5dfdf50a3a0c69dcd4b72c4"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "sha256": "92b6d4010abcf12c8c42b1629c5ca15df41da7566857c0e78b3ac265fa7f7ee0"
+    },
+    {
+      "path": "tests/test_quantem_checker.py",
+      "sha256": "5113bb47afc06a9937886a19ee7d1aeb253b3d259bcc7554c86dcc2e11ff8159"
+    }
+  ],
+  "github_surfaces": {
+    "remote_branches": [
+      "main"
+    ],
+    "tags": 0,
+    "releases": 0,
+    "workflows": 0,
+    "workflow_runs": 0,
+    "issues_or_pulls": 0,
+    "issue_comments": 0,
+    "review_comments": 0
+  },
+  "secret_scan": {
+    "reachable_history_commits": 3,
+    "history": "PASS; no findings",
+    "working_directory": "PASS; no findings",
+    "caveat": "Pattern-based detection, not proof of absence."
+  },
+  "artifacts": [
+    {
+      "file": "quantem_checker-0.2.0a1-py3-none-any.whl",
+      "sha256": "023bb5d5e6a8170a9526c409f9a50aaf83ebf24a4da48a19e3f7b789fbcfb95f",
+      "bytes": 26595,
+      "file_members": 17,
+      "paths": [
+        "quantem_checker-0.2.0a1.dist-info/METADATA",
+        "quantem_checker-0.2.0a1.dist-info/RECORD",
+        "quantem_checker-0.2.0a1.dist-info/WHEEL",
+        "quantem_checker-0.2.0a1.dist-info/entry_points.txt",
+        "quantem_checker-0.2.0a1.dist-info/licenses/LICENSE",
+        "quantem_checker-0.2.0a1.dist-info/licenses/LICENSES/Quantem-Research-MIT.txt",
+        "quantem_checker-0.2.0a1.dist-info/licenses/NOTICES.md",
+        "quantem_checker-0.2.0a1.dist-info/top_level.txt",
+        "quantem_checker/__init__.py",
+        "quantem_checker/__main__.py",
+        "quantem_checker/adequacy.py",
+        "quantem_checker/audit_demo.py",
+        "quantem_checker/availability.py",
+        "quantem_checker/core.py",
+        "quantem_checker/ledger.py",
+        "quantem_checker/pipeline.py",
+        "quantem_checker/screening.py"
+      ],
+      "personal_attribution_paths": [
+        "quantem_checker-0.2.0a1.dist-info/licenses/LICENSE"
+      ],
+      "all_nine_runtime_modules_match_source": true,
+      "both_mit_notices_and_notices_md_preserved": true,
+      "restricted_file_types": []
+    },
+    {
+      "file": "quantem_checker-0.2.0a1.tar.gz",
+      "sha256": "0d053512bdced05e8250e8c7f9a4b1d5d568894d23c2870d611826f865e4ea97",
+      "bytes": 31290,
+      "file_members": 26,
+      "paths": [
+        "quantem_checker-0.2.0a1/LICENSE",
+        "quantem_checker-0.2.0a1/LICENSES/Quantem-Research-MIT.txt",
+        "quantem_checker-0.2.0a1/NOTICES.md",
+        "quantem_checker-0.2.0a1/PKG-INFO",
+        "quantem_checker-0.2.0a1/README.md",
+        "quantem_checker-0.2.0a1/pyproject.toml",
+        "quantem_checker-0.2.0a1/quantem_checker.egg-info/PKG-INFO",
+        "quantem_checker-0.2.0a1/quantem_checker.egg-info/SOURCES.txt",
+        "quantem_checker-0.2.0a1/quantem_checker.egg-info/dependency_links.txt",
+        "quantem_checker-0.2.0a1/quantem_checker.egg-info/entry_points.txt",
+        "quantem_checker-0.2.0a1/quantem_checker.egg-info/requires.txt",
+        "quantem_checker-0.2.0a1/quantem_checker.egg-info/top_level.txt",
+        "quantem_checker-0.2.0a1/quantem_checker/__init__.py",
+        "quantem_checker-0.2.0a1/quantem_checker/__main__.py",
+        "quantem_checker-0.2.0a1/quantem_checker/adequacy.py",
+        "quantem_checker-0.2.0a1/quantem_checker/audit_demo.py",
+        "quantem_checker-0.2.0a1/quantem_checker/availability.py",
+        "quantem_checker-0.2.0a1/quantem_checker/core.py",
+        "quantem_checker-0.2.0a1/quantem_checker/ledger.py",
+        "quantem_checker-0.2.0a1/quantem_checker/pipeline.py",
+        "quantem_checker-0.2.0a1/quantem_checker/screening.py",
+        "quantem_checker-0.2.0a1/setup.cfg",
+        "quantem_checker-0.2.0a1/tests/test_audit_screening.py",
+        "quantem_checker-0.2.0a1/tests/test_audit_toolkit.py",
+        "quantem_checker-0.2.0a1/tests/test_cli.py",
+        "quantem_checker-0.2.0a1/tests/test_quantem_checker.py"
+      ],
+      "personal_attribution_paths": [
+        "quantem_checker-0.2.0a1/LICENSE"
+      ],
+      "all_nine_runtime_modules_match_source": true,
+      "both_mit_notices_and_notices_md_preserved": true,
+      "restricted_file_types": []
+    }
+  ],
+  "runtime_tests": {
+    "passed": 53,
+    "seconds": 1.73,
+    "skipped": 0
+  },
+  "runtime_tests_examples_unchanged_from_base": true,
+  "notice_fix": {
+    "source_revision": "8c58311ced006a079b6cfa03fd6329447aa95004",
+    "path": "LICENSES/Quantem-Research-MIT.txt",
+    "sha256": "7a1ab7751791eb7aaa792300a56dc93fba863bd64c20962c8dd6d4d8dbd7206d",
+    "original_checker_license_unchanged": true
+  },
+  "rights_assessment": "Both observed source trees carry MIT notices. Imported source/output hash mapping is retained. Ownership or third-party employment/assignment rights are not independently proven by these files.",
+  "public_status": "HOLD: required existing personal copyright notice conflicts with standing privacy rule; historical package-author metadata remains reachable.",
+  "not_authorized": [
+    "visibility change",
+    "public upload",
+    "history rewrite",
+    "copyright notice replacement",
+    "dataset release"
+  ]
+}

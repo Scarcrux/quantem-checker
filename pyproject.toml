@@ -9,7 +9,7 @@ description = "Local temporal pipeline probes, supplied-clock and portfolio-ledg
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
-license-files = ["LICENSE"]
+license-files = ["LICENSE", "LICENSES/*.txt", "NOTICES.md"]
 authors = [{ name = "Quantem Research" }]
 keywords = ["backtesting", "quant", "finance", "machine-learning", "lookahead", "leakage", "evaluation"]
 dependencies = ["numpy>=1.24"]
