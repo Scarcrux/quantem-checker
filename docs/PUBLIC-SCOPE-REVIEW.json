@@ -239,12 +239,26 @@
     "original_checker_license_unchanged": true
   },
   "rights_assessment": "Both observed source trees carry MIT notices. Imported source/output hash mapping is retained. Ownership or third-party employment/assignment rights are not independently proven by these files.",
-  "public_status": "HOLD: required existing personal copyright notice conflicts with standing privacy rule; historical package-author metadata remains reachable.",
+  "public_status": "HOLD for exact-scope publication approval; attribution/privacy conflict resolved by narrow owner exception dated 2026-11-15. Historical review and artifact hashes retained.",
   "not_authorized": [
     "visibility change",
     "public upload",
     "history rewrite",
     "copyright notice replacement",
     "dataset release"
-  ]
+  ],
+  "attribution_exception": {
+    "owner_instruction": "Allow existing attribution for this repo",
+    "date": "2026-11-15",
+    "scope": [
+      "existing LICENSE copyright-holder name",
+      "original bc4751c package-author name",
+      "required notice in a subsequently approved distribution"
+    ],
+    "historical_package_author_email_present": false,
+    "resolved_gate": "attribution/privacy conflict",
+    "record": "docs/ATTRIBUTION-EXCEPTION.md",
+    "publication_approved": false,
+    "additional_personal_information_allowed": false
+  }
 }

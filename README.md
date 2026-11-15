@@ -123,6 +123,8 @@ it runs the bounded direct good/bad controls. Its historical implementation
 remains in Git. No new grid/threshold benchmark was executed for this integration.
 
 Do not publish this repository or its history without explicit approval. The
-retained historical personal attribution/required LICENSE notice needs a separate
-privacy/notice disposition before any public release. No datasets or private
+owner approved retaining the existing copyright and historical package-author
+attribution on 2026-11-15; see [the narrow exception](docs/ATTRIBUTION-EXCEPTION.md).
+That resolves the attribution/privacy gate, while exact public-release approval
+remains required. No datasets or private
 paper evidence are included in this repository update.

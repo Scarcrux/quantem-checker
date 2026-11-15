@@ -67,8 +67,23 @@ name = "quantem-checker"
 
 [[mission]]
   id = "m-1b2353bb"
-  title = "Resolve notice privacy disposition and select exact release scope"
-  status = "next"
+  title = "Resolve the existing attribution privacy conflict"
+  status = "done"
   note = "Completed review identifies personal attribution in required LICENSE and original package metadata, not commit author emails. Both existing checker and imported source MIT notices must be handled with valid rights authority; do not delete or replace notices on assumption. Keep private pending owner disposition and exact history/package approval. Full-history visibility also exposes operational review/roadmap and corrected historical claims. No public action or history rewrite authorized."
+  issue = 0
+
+  [[mission.comment]]
+    text = "Owner explicitly selected Allow existing attribution for this repo. Record narrow exception for existing copyright name and historical package-author name only; no new personal contact details, personal commit identities, datasets or publication authorized. Retain original notices and history. Exact public release scope still requires approval."
+    at = "2026-11-15T16:55:39Z"
+
+  [[mission.comment]]
+    text = "Resolved: owner explicitly allows existing copyright-holder and historical package-author attribution for this repo only. Original package-author entry has no email field. Exception recorded in docs/ATTRIBUTION-EXCEPTION.md and README/review; notices and history preserved, new commits remain organization+noreply. Publication and additional personal information remain unapproved; exact release scope is tracked separately."
+    at = "2026-11-15T16:56:16Z"
+
+[[mission]]
+  id = "m-b5f8806a"
+  title = "Prepare exact release wording and obtain publication approval"
+  status = "next"
+  note = "Existing attribution exception is approved and recorded. Retain notices/history and keep data private. Before any public action, prepare final README/description/source links for selected repository or package route and present exact visible scope and destination for manual approval. Existing history includes older claims and operational reviews; no publication, visibility change, package upload or new identity exception is authorized."
   issue = 0
 # <<< commandem roadmap <<<

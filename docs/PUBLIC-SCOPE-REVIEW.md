@@ -4,6 +4,11 @@ Review date: 2026-11-15. Reviewed repository baseline:
 `473ad962db7a2aa81b203f251427c7c83f99a6c4f6`.
 
 **Verdict: useful software candidate; public release remains on HOLD.**
+Update: the owner subsequently approved retaining the existing attribution.
+[ATTRIBUTION-EXCEPTION.md](ATTRIBUTION-EXCEPTION.md) records the narrow exception.
+The attribution/privacy gate below is resolved; exact-scope publication approval
+remains outstanding. The original review findings and artifact hashes follow.
+
 The review fixes an omitted imported-source notice and verifies the resulting
 private artifacts. It does not authorize publication, identity exceptions,
 notice replacement, history rewriting or dataset disclosure.
@@ -68,7 +73,7 @@ or approved merely because this alternative was evaluated.
 
 ## Public gates and recommendation
 
-1. Resolve the standing privacy rule's conflict with the required personal
+1. **Resolved by the subsequent owner exception.** Resolve the standing privacy rule's conflict with the required personal
    notice. Keep the notice unless an authorized rights-holder disposition is
    established. A narrow privacy exception to retain that notice is an owner
    decision; it is not implied by the paper's public author identity. This review
