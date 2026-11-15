@@ -64,9 +64,13 @@ The baseline and integrated tests overlap and are not summed as independent test
 
 ## Private delivery and remaining public gates
 
-At initial recording the source is locally verified; private remote delivery is
-pending the normal commit/land/push checks. The delivery record is updated only
-after remote verification. No force push or visibility change is permitted.
+Source commit `f3af444c9d211789ca3b7912f7d3552879a6c4f6` was committed, landed
+and pushed normally to the existing private `Scarcrux/quantem-checker` main
+branch. Remote HEAD matched exactly, and GitHub reported PRIVATE immediately
+before and after the push. The final pre-commit rerun passed all 53 tests in
+2.73s; Ruff, whitespace and fully redacted secret scans also passed. This record
+and the roadmap are a subsequent documentation-only update. No force push or
+visibility change occurred; no public release is approved.
 
 The existing required personal copyright notice and old author attribution in
 history remain unchanged. New maintenance metadata and commits use organization/

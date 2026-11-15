@@ -67,10 +67,16 @@
   "new_authorship": "organization/noreply",
   "existing_personal_attribution_in_license_and_history": "retained; requires explicit public notice/privacy disposition",
   "private_delivery": {
-    "status": "PENDING",
+    "status": "VERIFIED",
     "repository": "Scarcrux/quantem-checker",
     "visibility_required": "PRIVATE",
-    "force_push_allowed": false
+    "force_push_allowed": false,
+    "source_commit": "f3af444c9d211789ca3b7912f7d3552879a6c4f6",
+    "verified_remote_main": "f3af444c9d211789ca3b7912f7d3552879a6c4f6",
+    "visibility_before_push": "PRIVATE",
+    "visibility_after_push": "PRIVATE",
+    "verified_utc": "2026-11-15T16:29:04.757047+00:00",
+    "note": "Normal fast-forward push verified; this delivery/roadmap record follows as a documentation-only commit."
   },
   "source_bindings": [
     {
@@ -165,5 +171,13 @@
     "user callbacks are trusted local code, not sandboxed",
     "caller supplies authentic clocks/marks; no automatic recovery of historical provenance",
     "one tested Python3.13/NumPy2.5.4 macOS environment; minimum-version/platform matrix unverified"
-  ]
+  ],
+  "final_precommit_tests": {
+    "passed": 53,
+    "seconds": 2.73,
+    "skipped": 0
+  },
+  "ruff": "PASS",
+  "whitespace_check": "PASS",
+  "fully_redacted_secret_scan": "PASS; no leaks found"
 }

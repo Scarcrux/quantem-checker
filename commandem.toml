@@ -42,7 +42,18 @@ name = "quantem-checker"
 [[mission]]
   id = "m-79c30f40"
   title = "Integrate reviewed temporal and ledger audits into the private checker"
-  status = "now"
+  status = "done"
   note = "Owner selected the existing private checker as project home. GitHub main bc4751c contains original 12-test statistical checker and a CLI that silently intersects axes. Integrate reviewed source8c58311c with legacy import/flag compatibility, strict input axes and nullable adequacy, direct prefix/clock/ledger checks, data-free demo and accurate documentation. Preserve history/LICENSE; no public visibility or release. Validate locally, inspect exact private diff and confirm remote privacy before private push."
+  issue = 0
+
+  [[mission.comment]]
+    text = "Completed private integration at source f3af444c9d211789ca3b7912f7d3552879a6c4f6. All 53 tests pass, including strict legacy CLI contracts and direct positive/negative controls; fresh wheel, build/Twine, lint, secret and byte-binding checks pass. Landed and pushed normally; remote main matches and PRIVATE verified before/after. No datasets, empirical replay, public action or history rewrite. Existing required LICENSE/history retained; public privacy/notice review remains."
+    at = "2026-11-15T16:29:04Z"
+
+[[mission]]
+  id = "m-38204ba3"
+  title = "Review exact public scope and retained attribution before a release decision"
+  status = "next"
+  note = "Integration is privately delivered and tested. Existing repository history and required LICENSE retain historical personal attribution. Review this exact scope and resolve privacy/notice disposition with the owner; only explicit manual approval can authorize visibility change, public code/package release or history treatment. No datasets or paper evidence belong in the release. This next mission authorizes preparation only."
   issue = 0
 # <<< commandem roadmap <<<
