@@ -1,0 +1,169 @@
+{
+  "schema": 1,
+  "written_utc": "2026-11-15T16:25:41.611021+00:00",
+  "baseline_commit": "bc4751c68160e608b74e9eea869f0a5f94b0afd2",
+  "reviewed_import_revision": "8c58311ced006a079b6cfa03fd6329447aa95004",
+  "package_version": "0.2.0a1",
+  "publication_approved": false,
+  "baseline_tests": {
+    "passed": 12,
+    "seconds": 0.74
+  },
+  "integrated_source_tests": {
+    "passed": 53,
+    "seconds": 1.72
+  },
+  "fresh_core_parquet_tests": {
+    "passed": 53,
+    "seconds": 1.73,
+    "skipped": 0
+  },
+  "build": {
+    "wheel_sha256": "31750538856cf88e967d6d2ab4b0cdae3241112e66719cb3a3b3a26440546e67",
+    "sdist_sha256": "4fcbb6a02f63e6092f6ad452e63d3649ae1557beb68b82422803ce1a1151d38a",
+    "package_modules_match_reviewed_source": 9,
+    "name_version_and_maintenance_metadata": "PASS",
+    "existing_license_preserved": true,
+    "restricted_data_platform_or_paper_files_in_wheel": false
+  },
+  "wheel_checks": {
+    "version": "0.2.0a1",
+    "import_and_cli_names_preserved": true,
+    "no_pandas_or_research_platform_required_for_demo": true,
+    "api_good_bad_controls": true,
+    "actual_demo_verdicts": {
+      "causal_cumulative": "PASS",
+      "future_oracle": "FAIL",
+      "full_series_centering": "FAIL",
+      "available_clock": "PASS",
+      "exact_cutoff_clock": "FAIL",
+      "empty_clock": "NOT TESTED",
+      "funded_ledger": "PASS",
+      "corrupt_fee": "FAIL"
+    },
+    "missing_optional_dependency_exit2": true,
+    "help": true,
+    "dependency_check": true,
+    "installed_outside_source": true
+  },
+  "actual_cli_generated_cases": [
+    {
+      "generated_case": "leaked",
+      "expected_exit": 1,
+      "observed_exit": 1,
+      "screen_status": "FLAGGED",
+      "schema": "quantem-checker/3"
+    },
+    {
+      "generated_case": "oracle",
+      "expected_exit": 0,
+      "observed_exit": 0,
+      "screen_status": "NOT_FLAGGED",
+      "schema": "quantem-checker/3"
+    }
+  ],
+  "legacy_flags_imports_and_helper_exports": "preserved, with documented stricter axes/adequacy and corrected numerical semantics",
+  "license_file_unchanged": true,
+  "new_authorship": "organization/noreply",
+  "existing_personal_attribution_in_license_and_history": "retained; requires explicit public notice/privacy disposition",
+  "private_delivery": {
+    "status": "PENDING",
+    "repository": "Scarcrux/quantem-checker",
+    "visibility_required": "PRIVATE",
+    "force_push_allowed": false
+  },
+  "source_bindings": [
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "ab8a3b32ec94ee3a47c1b43a9e82b54442be55766832aa5c0d51d74105146753"
+    },
+    {
+      "path": "NOTICES.md",
+      "sha256": "63c9582858f7330158adf59d0ff2ccbd16621207a42d47ae9d0fedcda72bc64b"
+    },
+    {
+      "path": "README.md",
+      "sha256": "ae888e9ff03b0239c2215c06c4ce7a3645dc41ec6fe4842f77f9473c83426a16"
+    },
+    {
+      "path": "docs/INTEGRATION-CRITERIA.md",
+      "sha256": "1e18ef77452251d024601a96fdb9c5359334c98fdf532784b071fdf61ba9f9e0"
+    },
+    {
+      "path": "docs/INTEGRATION-SOURCES.json",
+      "sha256": "d4b73687740c915edb232a814b64193324e9b50bdce170ca5eb909609ecfec68"
+    },
+    {
+      "path": "examples/specificity_grid.py",
+      "sha256": "2ce48c41f43831d8ebf22da258d89f9384f751a5533b412f165617bcbb0c6e8c"
+    },
+    {
+      "path": "examples/synthetic_demo.py",
+      "sha256": "c24a55631b59a5513855fe1c62d0bc40cd69bcfd97e3ce3b886da60f266c55ce"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "d246bd8cbf962acf9621da9fa9c95262602a76c361f23dc2114889d5cde4fcf1"
+    },
+    {
+      "path": "quantem_checker/__init__.py",
+      "sha256": "352924508b8799a9d3922a79eaf03a6819321e89f5268eddb0ef1f29e455954f"
+    },
+    {
+      "path": "quantem_checker/__main__.py",
+      "sha256": "d194e7015a9ee00dbd81f2e55441c0f690e766fda423c6ef20a04314872d775e"
+    },
+    {
+      "path": "quantem_checker/adequacy.py",
+      "sha256": "0c906e3b915028786e113d3005627ae63495acc9039bb6dc4aaff541d6500f1f"
+    },
+    {
+      "path": "quantem_checker/audit_demo.py",
+      "sha256": "a44fba31374b210ca1cb18c9e1fdd10a2d9c7a2fba91db3f0af760cb005a5518"
+    },
+    {
+      "path": "quantem_checker/availability.py",
+      "sha256": "a43ea9971f26a7948a7eb825984a6bd442a3c91480cf0766241373cf941bc6a8"
+    },
+    {
+      "path": "quantem_checker/core.py",
+      "sha256": "0e9bd2a2da83b2433989722186986c7305cb47daa0fbb46027510d65df81334b"
+    },
+    {
+      "path": "quantem_checker/ledger.py",
+      "sha256": "3279c4e2ab2f38ae882d3bf0cc2aa9a939100189e698a6fe4434844478cc8959"
+    },
+    {
+      "path": "quantem_checker/pipeline.py",
+      "sha256": "27ebbce383f119ffcead3c3f33ecf4e82fc406df34accf62d2b335afd1c1ecf3"
+    },
+    {
+      "path": "quantem_checker/screening.py",
+      "sha256": "71694b799a5602085b8eba12e10fc6f0afb748562b79a7badab8c68dba659243"
+    },
+    {
+      "path": "tests/test_audit_screening.py",
+      "sha256": "ce4bc22097b428b2981f90e498b7b0eeed033690861a5e1e816b26248f7263a4"
+    },
+    {
+      "path": "tests/test_audit_toolkit.py",
+      "sha256": "8d03c8f9b8b2325c4106d4dda35d4c068e3688d5f5dfdf50a3a0c69dcd4b72c4"
+    },
+    {
+      "path": "tests/test_cli.py",
+      "sha256": "92b6d4010abcf12c8c42b1629c5ca15df41da7566857c0e78b3ac265fa7f7ee0"
+    },
+    {
+      "path": "tests/test_quantem_checker.py",
+      "sha256": "5113bb47afc06a9937886a19ee7d1aeb253b3d259bcc7554c86dcc2e11ff8159"
+    }
+  ],
+  "data_or_private_paper_evidence_transferred": false,
+  "empirical_studies_or_paid_provider_access": false,
+  "limitations": [
+    "finite generated controls, not causal completeness or calibrated error rates",
+    "user callbacks are trusted local code, not sandboxed",
+    "caller supplies authentic clocks/marks; no automatic recovery of historical provenance",
+    "one tested Python3.13/NumPy2.5.4 macOS environment; minimum-version/platform matrix unverified"
+  ]
+}

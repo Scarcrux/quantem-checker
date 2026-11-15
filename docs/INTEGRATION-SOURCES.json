@@ -1,0 +1,64 @@
+{
+  "source_project_revision": "8c58311ced006a079b6cfa03fd6329447aa95004",
+  "source": "private reviewed first-party toolkit selection",
+  "transformations": [
+    "import namespace causal_fin_gnn.quantem_checker -> quantem_checker",
+    "audit schema namespace quantem-audit/ -> quantem-checker/",
+    "demo CLI test imports retained standalone __main__ entry point",
+    "standalone formatting/import ordering",
+    "non-mapping ledger row uses TypeError, still caught as invalid contract",
+    "arbitrary callback exceptions remain sanitized with an explicitly justified narrow Ruff suppression"
+  ],
+  "files": [
+    {
+      "source_path": "causal_fin_gnn/quantem_checker/screening.py",
+      "source_sha256": "661134a5de0479eec78a84a69874ea4898f291c5b40c34a12130cffbd1e7b728",
+      "output_path": "quantem_checker/screening.py",
+      "output_sha256": "71694b799a5602085b8eba12e10fc6f0afb748562b79a7badab8c68dba659243"
+    },
+    {
+      "source_path": "causal_fin_gnn/quantem_checker/adequacy.py",
+      "source_sha256": "9bfae7b19c717c0bd5b1e07ce002fa2ce26aac86c69191126fbd0c6af859cfc8",
+      "output_path": "quantem_checker/adequacy.py",
+      "output_sha256": "0c906e3b915028786e113d3005627ae63495acc9039bb6dc4aaff541d6500f1f"
+    },
+    {
+      "source_path": "causal_fin_gnn/quantem_checker/availability.py",
+      "source_sha256": "dcaa618d93130d806ac4bd0d1c100d932bfe31b520c6fde893eff3a61b0c8de4",
+      "output_path": "quantem_checker/availability.py",
+      "output_sha256": "a43ea9971f26a7948a7eb825984a6bd442a3c91480cf0766241373cf941bc6a8"
+    },
+    {
+      "source_path": "causal_fin_gnn/quantem_checker/pipeline.py",
+      "source_sha256": "abedd7658d2065e170947a8d9ae33ed45486ecd3d0feac3108b658f5ac0ce763",
+      "output_path": "quantem_checker/pipeline.py",
+      "output_sha256": "27ebbce383f119ffcead3c3f33ecf4e82fc406df34accf62d2b335afd1c1ecf3"
+    },
+    {
+      "source_path": "causal_fin_gnn/quantem_checker/ledger.py",
+      "source_sha256": "75245ec0d12c7c31aff849b81ea04faed5654b67bab61bfdd2e27707e0c2250a",
+      "output_path": "quantem_checker/ledger.py",
+      "output_sha256": "3279c4e2ab2f38ae882d3bf0cc2aa9a939100189e698a6fe4434844478cc8959"
+    },
+    {
+      "source_path": "causal_fin_gnn/quantem_checker/audit_demo.py",
+      "source_sha256": "986fb6f54f295f10a8e6e30c669252dc35835f5e5671ebcbdd7bcd6e995f5cfb",
+      "output_path": "quantem_checker/audit_demo.py",
+      "output_sha256": "a44fba31374b210ca1cb18c9e1fdd10a2d9c7a2fba91db3f0af760cb005a5518"
+    },
+    {
+      "source_path": "tests/test_audit_toolkit.py",
+      "source_sha256": "333e0b36919d10c3666d1bafb857691404a5d0c816cea19a64e2da6b0438f80a",
+      "output_path": "tests/test_audit_toolkit.py",
+      "output_sha256": "8d03c8f9b8b2325c4106d4dda35d4c068e3688d5f5dfdf50a3a0c69dcd4b72c4"
+    },
+    {
+      "source_path": "tests/test_audit_screening.py",
+      "source_sha256": "a21058f5b3e0297015f3c5953056ddda8da4ee289b4c6e97269ece10cd7b7875",
+      "output_path": "tests/test_audit_screening.py",
+      "output_sha256": "ce4bc22097b428b2981f90e498b7b0eeed033690861a5e1e816b26248f7263a4"
+    }
+  ],
+  "data_or_private_evidence_copied": false,
+  "publication_approved": false
+}

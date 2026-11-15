@@ -1,28 +1,29 @@
-"""Golden-master tests for the model-agnostic quantem-checker harness.
+"""Compatibility fixtures for statistical diagnostic behavior on generated arrays.
 
-The battery is validated against three known-ground-truth signals: a synthetic
-contemporaneous leak it must flag, a clean forward signal it must pass, and a churning
-allocator whose net Sharpe must fall below gross.
+Legacy test names remain, but a forward-generated oracle uses future outcomes.
+Not timing-flagging that array does not certify pipeline information availability.
+Direct causal probes and accounting controls have separate tests.
 """
+
 import numpy as np
 
 from quantem_checker import run_check, timing_dose_response
 
 
 def _leaked(T=200, N=120, lam=0.3, seed=0):
-    """A signal correlated with the SAME period's return — a contemporaneous leak."""
+    """Generated same-period correlation control; a flag is not availability proof."""
     rng = np.random.default_rng(seed)
     ret = rng.standard_normal((T, N))
-    pred = lam * ret + np.sqrt(1 - lam ** 2) * rng.standard_normal((T, N))
+    pred = lam * ret + np.sqrt(1 - lam**2) * rng.standard_normal((T, N))
     return pred, ret
 
 
 def _clean_forward(T=200, N=120, lam=0.25, seed=1):
-    """A signal correlated with NEXT period's return — a clean forward signal."""
+    """Generated oracle using NEXT period returns; not an implementable predictor."""
     rng = np.random.default_rng(seed)
     ret = rng.standard_normal((T, N))
     pred = np.empty((T, N))
-    pred[:-1] = lam * ret[1:] + np.sqrt(1 - lam ** 2) * rng.standard_normal((T - 1, N))
+    pred[:-1] = lam * ret[1:] + np.sqrt(1 - lam**2) * rng.standard_normal((T - 1, N))
     pred[-1] = rng.standard_normal(N)
     return pred, ret
 
@@ -52,6 +53,7 @@ def test_dose_response_monotone_collapse_for_leak():
 
 def test_returns_json_safe_types():
     import json
+
     pred, ret = _leaked(T=80, N=60)
     rec = run_check(pred, ret)
     json.dumps(rec)  # must not raise (no numpy scalar types leak through)
@@ -59,6 +61,7 @@ def test_returns_json_safe_types():
 
 def test_periods_per_year_scales_sharpe():
     from quantem_checker import net_of_cost
+
     pred, ret = _clean_forward(T=240, N=100)
     daily = net_of_cost(pred, ret, periods_per_year=252)["gross_sharpe"]
     monthly = net_of_cost(pred, ret, periods_per_year=12)["gross_sharpe"]
@@ -68,16 +71,18 @@ def test_periods_per_year_scales_sharpe():
 
 def test_net_of_cost_per_name():
     from quantem_checker import net_of_cost_per_name
+
     rng = np.random.default_rng(5)
     T, N = 300, 20
     ret = rng.standard_normal((T, N)) * 0.01
     # a churning allocator: random dense weights each period -> high turnover -> net << gross
     raw = rng.standard_normal((T, N))
-    W = np.exp(raw - raw.max(axis=1, keepdims=True)); W /= W.sum(axis=1, keepdims=True)
-    cost = np.full(N, 0.001)                     # 10 bps per name
+    W = np.exp(raw - raw.max(axis=1, keepdims=True))
+    W /= W.sum(axis=1, keepdims=True)
+    cost = np.full(N, 0.001)  # 10 bps per name
     rec = net_of_cost_per_name(W, ret, cost)
     assert np.isfinite(rec["gross_sharpe"]) and np.isfinite(rec["net_sharpe"])
-    assert rec["net_sharpe"] < rec["gross_sharpe"]      # cost reduces Sharpe
+    assert rec["net_sharpe"] < rec["gross_sharpe"]  # cost reduces Sharpe
     assert rec["turnover_per_period"] > 0
     # per-name cost with a higher spread on every name charges more drag
     rec_hi = net_of_cost_per_name(W, ret, np.full(N, 0.005), 252)
@@ -86,14 +91,16 @@ def test_net_of_cost_per_name():
 
 def test_dense_weight_convergence_flags_1N():
     from quantem_checker import portfolio_baseline_convergence, run_check
+
     rng = np.random.default_rng(3)
     T, N = 200, 30
     ret = rng.standard_normal((T, N))
-    eqw = np.full((T, N), 1.0 / N)                      # a 1/N allocator in disguise
+    eqw = np.full((T, N), 1.0 / N)  # a 1/N allocator in disguise
     conv = portfolio_baseline_convergence(eqw, ret)
     assert conv["corr_to_1N"] > 0.99 and conv["mean_abs_dev_from_1N"] < 1e-6
     # a concentrated allocator is distinct from 1/N
-    conc = np.zeros((T, N)); conc[:, 0] = 1.0
+    conc = np.zeros((T, N))
+    conc[:, 0] = 1.0
     assert portfolio_baseline_convergence(conc, ret)["corr_to_1N"] < 0.5
     # run_check threads weights + periods_per_year (RL allocator path)
     pred = rng.standard_normal((T, N))
@@ -109,6 +116,7 @@ def test_dense_weight_convergence_flags_1N():
 # recent return / a lagged denominator.
 # ---------------------------------------------------------------------------
 
+
 def _ar1_reversal(T=400, N=150, phi=-0.15, sigma=0.1, seed=7):
     """An AR(1) process with negative autocorrelation, traded by a reversal rule
     pred[t] = -ret[t]. This is an HONEST signal: because ret[t+1] = phi*ret[t] + eps and
@@ -120,7 +128,7 @@ def _ar1_reversal(T=400, N=150, phi=-0.15, sigma=0.1, seed=7):
     ret[0] = rng.standard_normal(N) * sigma
     for t in range(1, T):
         ret[t] = phi * ret[t - 1] + rng.standard_normal(N) * sigma
-    pred = -ret                                          # condition on the latest return
+    pred = -ret  # condition on the latest return
     return pred, ret
 
 
@@ -146,10 +154,15 @@ def _value_lagged_denominator(T=400, N=150, seed=11):
     price = np.exp(log_price)
     pred = np.empty((T, N))
     pred[0] = fundamental / price[0]
-    pred[1:] = fundamental / price[:-1]                  # lagged denominator (price[t-1])
+    pred[1:] = fundamental / price[:-1]  # lagged denominator (price[t-1])
     # a real forward tilt: cheap names (high pred) earn a small positive next-period return
-    z = (pred - pred.mean(axis=1, keepdims=True)) / (pred.std(axis=1, keepdims=True) + 1e-9)
-    ret = 0.12 * np.vstack([z[max(t - 1, 0)] for t in range(T)]) + rng.standard_normal((T, N)) * 0.1
+    z = (pred - pred.mean(axis=1, keepdims=True)) / (
+        pred.std(axis=1, keepdims=True) + 1e-9
+    )
+    ret = (
+        0.12 * np.vstack([z[max(t - 1, 0)] for t in range(T)])
+        + rng.standard_normal((T, N)) * 0.1
+    )
     return pred, ret
 
 
@@ -172,8 +185,8 @@ def _ewma_momentum(T=400, N=150, halflife=10, seed=13):
     ret[0] = ret_noise[0]
     for t in range(1, T):
         ewma[t] = (1 - alpha) * ewma[t - 1] + alpha * ret[t - 1]
-        ret[t] = 0.08 * ewma[t] + ret_noise[t]           # momentum continuation
-    pred = ewma                                          # overlapping EWMA momentum signal
+        ret[t] = 0.08 * ewma[t] + ret_noise[t]  # momentum continuation
+    pred = ewma  # overlapping EWMA momentum signal
     return pred, ret
 
 
@@ -203,12 +216,13 @@ def test_random_graph_control_no_self_loops():
     """[P2-randgraph] regression: the real graph's diagonal is zeroed and the random
     control draws only off-diagonal neighbours, so a node never averages its own signal."""
     from quantem_checker import random_graph_control
+
     rng = np.random.default_rng(19)
     T, N = 150, 40
     ret = rng.standard_normal((T, N))
     pred = rng.standard_normal((T, N))
-    adj = (rng.random((N, N)) < 0.2)
-    np.fill_diagonal(adj, True)                          # adversarial: self-loops present
+    adj = rng.random((N, N)) < 0.2
+    np.fill_diagonal(adj, True)  # adversarial: self-loops present
     real, rand = random_graph_control(pred, ret, adj, seeds=5)
     # must run without error and return finite Sharpes despite the seeded self-loops
     assert np.isfinite(real) and np.isfinite(rand)

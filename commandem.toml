@@ -1,0 +1,48 @@
+# commandem project manifest - see SPEC.md for the full contract.
+# Committed at the project root; this is the authoritative
+# self-description. Re-run `commandem add .` after editing.
+
+manifest_schema = 1 # layout version; an older commandem refuses to rewrite a newer one
+name = "quantem-checker"
+# working_dir defaults to this manifest's directory, so it is deliberately
+# NOT scaffolded: hardcoding an absolute path pins the file to one machine
+# and makes it uncommittable (which is why 37 of 47 manifests were once
+# gitignored or left untracked). Set it ONLY to point somewhere else.
+# icon_emoji = "🛰️"
+
+# --- Privacy -----------------------------------------------------
+# Project data classification controls which provider Profile may receive
+# context. commandem privacy scan <project> is a local, no-egress preview.
+# [privacy]
+# classification = "internal" # public | internal | confidential | restricted
+# restricted_paths = ["private/**"]
+# categories = ["customer_data"]
+
+# --- Mode A: periodic checks -------------------------------------
+# Provide check_command to run a health check on an interval. It must
+# print a JSON array [{ "name": str, "ok": bool, "msg": str }] and
+# exit 0 iff every check passed (non-JSON output falls back to one
+# synthesized result keyed on exit code). See SPEC.md "Check output".
+# check_command = "./scripts/commandem_check.sh"
+# check_interval_minutes = 15
+
+# --- Mode B: long-running job ------------------------------------
+# Provide process_pattern to track a long-running job by pgrep. Add
+# log_glob (relative to working_dir) to surface the latest log;
+# completion_marker marks "done"; progress_regex needs exactly one
+# capture group around the progress count.
+# process_pattern = "train.py"
+# log_glob = "results/*.log"
+# completion_marker = "RECOMMENDATION"
+# progress_regex = "window (\\d+) done"
+# progress_total = 140
+# queue_file = "results/queue.txt"
+
+# >>> commandem roadmap (managed: edit missions in the Commandem app or `commandem roadmap`) >>>
+[[mission]]
+  id = "m-79c30f40"
+  title = "Integrate reviewed temporal and ledger audits into the private checker"
+  status = "now"
+  note = "Owner selected the existing private checker as project home. GitHub main bc4751c contains original 12-test statistical checker and a CLI that silently intersects axes. Integrate reviewed source8c58311c with legacy import/flag compatibility, strict input axes and nullable adequacy, direct prefix/clock/ledger checks, data-free demo and accurate documentation. Preserve history/LICENSE; no public visibility or release. Validate locally, inspect exact private diff and confirm remote privacy before private push."
+  issue = 0
+# <<< commandem roadmap <<<
