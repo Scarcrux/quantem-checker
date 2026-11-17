@@ -140,6 +140,17 @@ labelling its forward-generated oracle honestly. The former
 it runs the bounded direct good/bad controls. Its historical implementation
 remains in Git. No new grid/threshold benchmark was executed for this integration.
 
-A full minimum-version/platform matrix remains unverified. No external adoption or calibrated
-detection error rates are claimed. Caller-supplied stage/event identifiers may
+Tested environments for this release (`d2bed72`), each a fresh install with the
+full test suite and `quantem-checker demo`:
+
+| Python | NumPy | pandas | PyArrow | Platform | Result |
+| --- | --- | --- | --- | --- | --- |
+| 3.10 | 1.24.4 | not installed | not installed | Linux aarch64 | 45 passed, 8 Parquet tests skipped; demo OK |
+| 3.10 | 1.24.4 | 2.0.3 | 14.0.2 | Linux aarch64 | 53 passed; demo OK |
+| 3.13 | 2.5.5 | 3.1.1 | 26.0.1 | Linux aarch64 | 53 passed; demo OK |
+| 3.13 | 2.5.5 | 3.1.1 | 26.0.1 | macOS arm64 | 53 passed; demo OK |
+
+The first two rows are the declared minimums. Windows, Intel/x86-64 and versions
+between the minimum and current releases were not tested. No external adoption or
+calibrated detection error rates are claimed. Caller-supplied stage/event identifiers may
 appear in local reports; those reports are not automatically anonymized.
