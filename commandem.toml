@@ -94,7 +94,18 @@ name = "quantem-checker"
 [[mission]]
   id = "m-99121a08"
   title = "Obtain explicit approval for the prepared public repository scope"
-  status = "next"
+  status = "done"
   note = "Prepared proposal docs/RELEASE-PROPOSAL.md and QA docs/RELEASE-PREPARATION.json. Proposed action: make existing Scarcrux/quantem-checker public at exact final approved commit/history and update description; no package upload, release/tag, website, datasets or private paper evidence. Existing attribution exception approved. Source/history, operational review documents and private research revision hashes would become visible. Keep PRIVATE until explicit manual approval; verify exact remote commit before action and anonymous access afterward."
+  issue = 0
+
+  [[mission.comment]]
+    text = "Done 2026-11-15 (recorded 2026-11-19 after an Oralbiome relay asked for the approval record). The owner explicitly approved publishing the prepared scope in the Quantem session ('Publish — I did choose the attribution exception'), after reviewing the exact proposal (d2bed72, 6 commits, 32 files, no tags, no PyPI). Before the flip: clean-clone tests 53/53, build and twine OK, full-history scan clean. After: public visibility confirmed via the API and an anonymous clone. Quantem roadmap mission m-15eb09e4 records the same approval. Later: README tested-version matrix (efdba13, docs only). The 'Keep PRIVATE' wording in this and earlier missions describes the pre-approval state."
+    at = "2026-11-19T16:02:40Z"
+
+[[mission]]
+  id = "m-8861a05d"
+  title = "Decide whether to publish quantem-checker 0.2.0a1 to PyPI"
+  status = "next"
+  note = "The repository is public (since 2026-11-15) but nothing has been uploaded to PyPI; no upload is approved. Owner decision. If approved: claim the 'quantem-checker' name, upload the tested wheel/sdist from d2bed72 (or a tagged successor), and verify a fresh pip install."
   issue = 0
 # <<< commandem roadmap <<<
