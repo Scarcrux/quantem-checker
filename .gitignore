@@ -9,3 +9,8 @@ venv/
 .DS_Store
 *.parquet
 *.npy
+
+# Agent guidance synced by commandem brief; names private fleet projects, keep local.
+CLAUDE.md
+AGENTS.md
+GEMINI.md
